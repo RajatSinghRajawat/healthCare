@@ -1,9 +1,11 @@
 import React from 'react'
+import Blog from './Components/Blog'
 
 const App = () => {
   return (
-    <div className='h-45 w-50 bg-black'>
-        tushar
+    <div >
+      <Blog />
+        
     </div>
   )
 }
