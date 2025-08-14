@@ -1,9 +1,12 @@
 import React from 'react'
+import Home from './Components/Home'
+import About from './Components/About'
 
-const App = () => {
+function App() {
   return (
-    <div className='h-45 w-50 bg-black'>
-     hiiii
+    <div>
+      <Home/>
+      <About/>
     </div>
   )
 }
