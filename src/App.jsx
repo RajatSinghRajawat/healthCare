@@ -1,9 +1,11 @@
 import React from 'react'
+import Doctor from './Components/Doctor'
 
 const App = () => {
   return (
-    <div className='h-45 w-50 bg-black'>
-        tushar
+    <div>
+      <Doctor/>
+      
     </div>
   )
 }
