@@ -52,7 +52,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ThemeContext from "./ThemeContext.jsx";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Blog from "./Components/Blog.jsx";
+import Blog from "./Pages/Blog.jsx";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
