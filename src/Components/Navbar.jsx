@@ -195,7 +195,7 @@ import ThemeContext from "../ThemeContext.jsx";
 import img from "../assets/Image/output-onlinepngtools.png";
 
 const Navbar = () => {
-  const { isDarkMode, toggleTheme, colors } = useContext(ThemeContext);
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -229,9 +229,9 @@ const Navbar = () => {
         name === "Home"
           ? "/"
           : `/${name
-              .replace(/ & /g, "-")
-              .replace(/\s+/g, "-")
-              .toLowerCase()}`,
+            .replace(/ & /g, "-")
+            .replace(/\s+/g, "-")
+            .toLowerCase()}`,
     })
   );
 
@@ -252,9 +252,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 backdrop-blur-md shadow-lg ${
-        isDarkMode ? "bg-black text-white" : "bg-white text-black"
-      } transition-colors duration-300`}
+      className={`sticky top-0 z-50 backdrop-blur-md shadow-lg ${isDarkMode ? "bg-black text-white" : "bg-white text-black"
+        } transition-colors duration-300`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between flex-wrap py-4">
@@ -280,19 +279,17 @@ const Navbar = () => {
 
           {/* Nav Links */}
           <nav
-            className={`w-full md:w-auto md:flex md:items-center md:gap-4 flex-col md:flex-row transition-all duration-300 ${
-              isMenuOpen ? "flex" : "hidden"
-            }`}
+            className={`w-full md:w-auto md:flex md:items-center md:gap-4 flex-col md:flex-row transition-all duration-300 ${isMenuOpen ? "flex" : "hidden"
+              }`}
           >
             {navLinks.slice(0, 5).map((link) => (
               <NavLink
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full ${
-                    isActive
-                      ? "bg-purple-500 text-white"
-                      : "hover:bg-purple-500 hover:text-white"
+                  `py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full ${isActive
+                    ? "bg-purple-500 text-white"
+                    : "hover:bg-purple-500 hover:text-white"
                   }`
                 }
               >
@@ -304,19 +301,17 @@ const Navbar = () => {
             <div ref={dropdownRef} className="relative w-full md:w-auto">
               <button
                 onClick={toggleDropdown}
-                className={`py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full flex justify-between items-center ${
-                  isServiceActive
-                    ? "bg-purple-500 text-white"
-                    : "hover:bg-purple-500 hover:text-white"
-                }`}
+                className={`py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full flex justify-between items-center ${isServiceActive
+                  ? "bg-purple-500 text-white"
+                  : "hover:bg-purple-500 hover:text-white"
+                  }`}
               >
                 Services <span className="ml-2">&#9662;</span>
               </button>
               {isDropdownOpen && (
                 <div
-                  className={`md:absolute md:top-full md:left-0 flex flex-col ${
-                    isDarkMode ? "bg-black" : "bg-white"
-                  } shadow-lg rounded-lg mt-1 md:min-w-[200px] overflow-hidden`}
+                  className={`md:absolute md:top-full md:left-0 flex flex-col ${isDarkMode ? "bg-black" : "bg-white"
+                    } shadow-lg rounded-lg mt-1 md:min-w-[200px] overflow-hidden`}
                 >
                   {services.map((service, index) => (
                     <NavLink
@@ -325,10 +320,9 @@ const Navbar = () => {
                         .replace(/\s+/g, "-")
                         .toLowerCase()}`}
                       className={({ isActive }) =>
-                        `py-2 px-4 transition-colors duration-300 whitespace-nowrap ${
-                          isActive
-                            ? "bg-purple-500 text-white"
-                            : "hover:bg-purple-500 hover:text-white"
+                        `py-2 px-4 transition-colors duration-300 whitespace-nowrap ${isActive
+                          ? "bg-purple-500 text-white"
+                          : "hover:bg-purple-500 hover:text-white"
                         }`
                       }
                     >
@@ -343,10 +337,9 @@ const Navbar = () => {
             <NavLink
               to={navLinks[5].path}
               className={({ isActive }) =>
-                `py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full ${
-                  isActive
-                    ? "bg-purple-500 text-white"
-                    : "hover:bg-purple-500 hover:text-white"
+                `py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full ${isActive
+                  ? "bg-purple-500 text-white"
+                  : "hover:bg-purple-500 hover:text-white"
                 }`
               }
             >
@@ -358,10 +351,9 @@ const Navbar = () => {
               <NavLink
                 to="/signup"
                 className={({ isActive }) =>
-                  `w-full md:w-auto py-2 px-4 rounded-lg transition-colors duration-300 text-center ${
-                    isActive
-                      ? "bg-purple-500 text-white"
-                      : "bg-purple-500 text-white hover:bg-purple-500"
+                  `w-full md:w-auto py-2 px-4 rounded-lg transition-colors duration-300 text-center ${isActive
+                    ? "bg-purple-500 text-white"
+                    : "bg-purple-500 text-white hover:bg-purple-500"
                   }`
                 }
               >
@@ -370,10 +362,9 @@ const Navbar = () => {
               <NavLink
                 to="/login"
                 className={({ isActive }) =>
-                  `w-full md:w-auto py-2 px-4 rounded-lg transition-colors duration-300 text-center ${
-                    isActive
-                      ? "bg-purple-500 text-white"
-                      : "bg-purple-500 text-white hover:bg-purple-500"
+                  `w-full md:w-auto py-2 px-4 rounded-lg transition-colors duration-300 text-center ${isActive
+                    ? "bg-purple-500 text-white"
+                    : "bg-purple-500 text-white hover:bg-purple-500"
                   }`
                 }
               >
@@ -389,22 +380,19 @@ const Navbar = () => {
                 />
                 <label
                   htmlFor="theme"
-                  className={`flex items-center justify-between w-11 h-5 ${
-                    isDarkMode ? "bg-black" : "bg-white"
-                  } rounded-full p-1 cursor-pointer transition-colors duration-300`}
+                  className={`flex items-center justify-between w-11 h-5 ${isDarkMode ? "bg-black" : "bg-white"
+                    } rounded-full p-1 cursor-pointer transition-colors duration-300`}
                 >
                   <span className="absolute left-1 text-sm text-white transition-opacity duration-300">
                     <i className="fas fa-sun"></i>
                   </span>
                   <span
-                    className={`absolute w-4 h-4 rounded-full top-1/2 transform -translate-y-1/2 transition-transform duration-300 ${
-                      isDarkMode ? "translate-x-5 bg-white" : "translate-x-0 bg-black"
-                    }`}
+                    className={`absolute w-4 h-4 rounded-full top-1/2 transform -translate-y-1/2 transition-transform duration-300 ${isDarkMode ? "translate-x-5 bg-white" : "translate-x-0 bg-black"
+                      }`}
                   ></span>
                   <span
-                    className={`absolute right-1 text-sm text-white transition-opacity duration-300 ${
-                      isDarkMode ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`absolute right-1 text-sm text-white transition-opacity duration-300 ${isDarkMode ? "opacity-100" : "opacity-0"
+                      }`}
                   >
                     <i className="fas fa-moon"></i>
                   </span>

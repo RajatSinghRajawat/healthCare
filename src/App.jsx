@@ -52,7 +52,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ThemeContext from "./ThemeContext.jsx";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Blog from "./Pages/Blog.jsx";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Doctor from "./Pages/Doctor.jsx";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -90,7 +92,12 @@ function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              <Route path="/Blog" element={<Blog />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/doctors" element={<Doctor />} />
+
+
+
             </Routes>
           </main>
           <Footer />

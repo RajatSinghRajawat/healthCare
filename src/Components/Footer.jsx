@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import ThemeContext from "../ThemeContext.jsx";
 
 const Footer = () => {
-  const { isDarkMode, colors } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
@@ -42,11 +42,9 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full ${
-        isDarkMode ? "bg-black text-white" : "bg-white text-black"
-      } transition-colors duration-300 border-t ${
-        isDarkMode ? "border-white/20" : "border-black/20"
-      } animate-fade-in`}
+      className={`w-full ${isDarkMode ? "bg-black text-white" : "bg-white text-black"
+        } transition-colors duration-300 border-t ${isDarkMode ? "border-white/20" : "border-black/20"
+        } animate-fade-in`}
     >
       <div className="container mx-auto px-6 py-12 flex flex-wrap justify-between gap-10 max-w-7xl">
         {/* About & Social */}
@@ -120,11 +118,10 @@ const Footer = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className={`p-3 rounded-lg border-2 border-purple-500 outline-none text-base w-full max-w-[320px] transition-all duration-300 ${
-                isDarkMode
-                  ? "bg-black text-white placeholder-white/60"
-                  : "bg-white text-black placeholder-black/60"
-              } focus:ring-2 focus:ring-purple-500`}
+              className={`p-3 rounded-lg border-2 border-purple-500 outline-none text-base w-full max-w-[320px] transition-all duration-300 ${isDarkMode
+                ? "bg-black text-white placeholder-white/60"
+                : "bg-white text-black placeholder-black/60"
+                } focus:ring-2 focus:ring-purple-500`}
             />
             <button
               type="submit"
@@ -137,9 +134,8 @@ const Footer = () => {
       </div>
 
       <div
-        className={`text-center text-sm font-medium opacity-80 py-6 border-t ${
-          isDarkMode ? "border-white/20" : "border-black/20"
-        } animate-fade-in`}
+        className={`text-center text-sm font-medium opacity-80 py-6 border-t ${isDarkMode ? "border-white/20" : "border-black/20"
+          } animate-fade-in`}
       >
         &copy; 2025 HealthCare. All Rights Reserved. | Designed By A Human
       </div>
