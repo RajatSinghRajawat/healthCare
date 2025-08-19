@@ -1,45 +1,110 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalendarAlt, FaChevronDown, FaChevronUp, FaRegLightbulb, FaUsers, FaAward, FaClock, FaMedal, FaUserFriends, FaCalendarCheck, FaUserMd, FaSmile, FaStethoscope, FaSyringe, FaHospital, FaFirstAid } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaCalendarAlt,
+  FaChevronDown,
+  FaChevronUp,
+  FaRegLightbulb,
+  FaUsers,
+  FaAward,
+  FaClock,
+  FaMedal,
+  FaUserFriends,
+  FaCalendarCheck,
+  FaUserMd,
+  FaSmile,
+  FaStethoscope,
+  FaSyringe,
+  FaHospital,
+  FaFirstAid,
+} from "react-icons/fa";
 
 const About = () => {
   const services = [
     {
       icon: <FaStethoscope size={40} />,
       title: "General Check-ups",
-      description: "Routine health examinations and preventive care to keep you and your family in peak health.",
+      description:
+        "Routine health examinations and preventive care to keep you and your family in peak health.",
     },
     {
       icon: <FaSyringe size={40} />,
       title: "Vaccinations",
-      description: "Comprehensive immunization services for children, adults, and travelers, ensuring safe and effective protection.",
+      description:
+        "Comprehensive immunization services for children, adults, and travelers, ensuring safe and effective protection.",
     },
     {
       icon: <FaHospital size={40} />,
       title: "Specialized Treatments",
-      description: "Advanced care in cardiology, orthopedics, neurology, and more, delivered by expert specialists.",
+      description:
+        "Advanced care in cardiology, orthopedics, neurology, and more, delivered by expert specialists.",
     },
     {
       icon: <FaFirstAid size={40} />,
       title: "Emergency Services",
-      description: "24/7 urgent care and emergency treatment for accidents, injuries, and sudden illnesses.",
+      description:
+        "24/7 urgent care and emergency treatment for accidents, injuries, and sudden illnesses.",
     },
   ];
 
   const teamMembers = [
-    { name: "Dr. Ramesh Bhat", img: "https://encrypted-tbn0.gstatic.com/images?q=9GcTzVIU9zdvipE7-6J-jnF6SQcWVW3SsJcbNVw&s", degree: "MD Endocrinology", text: "Hormone & metabolism expert." },
-    { name: "Dr. Seema Patel", img: "https://doximity-res.cloudinary.com/images/f_auto,q_auto,t_profile_photo_320x320/zccxprhw125oaabvh35d/seema-patel-md-kenneth-city-fl.jpg", degree: "MD Pediatrics", text: "Child healthcare specialist." },
-    { name: "Dr. Vikram Mehta", img: "https://www.ceoinsightsindia.com/uploaded_images/company_logos/00hm1.VIKRAM.jpg", degree: "MD Pulmonology", text: "Respiratory system expert." },
-    { name: "Dr. Nandini Rao", img: "https://encrypted-tbn0.gstatic.com/images?q=9GcS9f0PFKjOUV5_1ccCiQOwMp3OTZZdR7uTLCg&s", degree: "MS Orthopedic", text: "Bone & joint care specialist." },
-    { name: "Dr. Rajiv Chopra", img: "https://encrypted-tbn0.gstatic.com/images?q=9GcSL7sZLjwh8vu8JzRX4YIHBOo0wvjKenngHTw&s", degree: "MD Dermatology", text: "Skin & cosmetic care." },
-    { name: "Dr. Anushka Malhotra", img: "https://encrypted-tbn0.gstatic.com/images?q=9GcS4mXwU5T-UiCXoYo6QpOIHdZHbT5xMuVrGXA&s", degree: "MD Gynecology", text: "Women’s health specialist." },
-    { name: "Dr. Deepak Sharma", img: "https://encrypted-tbn0.gstatic.com/images?q=9GcRfIylQmFKctlVaSivpKnDvG9X3audBdJlj5w&s", degree: "MBBS, MD", text: "General medicine expert." },
-    { name: "Dr. Poonam Yadav", img: "https://encrypted-tbn0.gstatic.com/images?q=9GcQHHjkToVTwu4BwToCjyhv_5xiJtOkzFKp3ww&s", degree: "PhD Nutrition", text: "Diet & wellness guidance." }
+    {
+      name: "Dr. Ramesh Bhat",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=9GcTzVIU9zdvipE7-6J-jnF6SQcWVW3SsJcbNVw&s",
+      degree: "MD Endocrinology",
+      text: "Hormone & metabolism expert.",
+    },
+    {
+      name: "Dr. Seema Patel",
+      img: "https://doximity-res.cloudinary.com/images/f_auto,q_auto,t_profile_photo_320x320/zccxprhw125oaabvh35d/seema-patel-md-kenneth-city-fl.jpg",
+      degree: "MD Pediatrics",
+      text: "Child healthcare specialist.",
+    },
+    {
+      name: "Dr. Vikram Mehta",
+      img: "https://www.ceoinsightsindia.com/uploaded_images/company_logos/00hm1.VIKRAM.jpg",
+      degree: "MD Pulmonology",
+      text: "Respiratory system expert.",
+    },
+    {
+      name: "Dr. Nandini Rao",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=9GcS9f0PFKjOUV5_1ccCiQOwMp3OTZZdR7uTLCg&s",
+      degree: "MS Orthopedic",
+      text: "Bone & joint care specialist.",
+    },
+    {
+      name: "Dr. Rajiv Chopra",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=9GcSL7sZLjwh8vu8JzRX4YIHBOo0wvjKenngHTw&s",
+      degree: "MD Dermatology",
+      text: "Skin & cosmetic care.",
+    },
+    {
+      name: "Dr. Anushka Malhotra",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=9GcS4mXwU5T-UiCXoYo6QpOIHdZHbT5xMuVrGXA&s",
+      degree: "MD Gynecology",
+      text: "Women’s health specialist.",
+    },
+    {
+      name: "Dr. Deepak Sharma",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=9GcRfIylQmFKctlVaSivpKnDvG9X3audBdJlj5w&s",
+      degree: "MBBS, MD",
+      text: "General medicine expert.",
+    },
+    {
+      name: "Dr. Poonam Yadav",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=9GcQHHjkToVTwu4BwToCjyhv_5xiJtOkzFKp3ww&s",
+      degree: "PhD Nutrition",
+      text: "Diet & wellness guidance.",
+    },
   ];
 
   const steps = [
     {
       title: "Choose Service",
-      description: "Select the health service or specialist you need for your appointment.",
+      description:
+        "Select the health service or specialist you need for your appointment.",
       icon: <FaStethoscope size={40} color="#fff" />,
       bgColor: "purple-500",
     },
@@ -51,13 +116,15 @@ const About = () => {
     },
     {
       title: "Consult with Doctor",
-      description: "Meet your doctor either online or at our facility for professional care.",
+      description:
+        "Meet your doctor either online or at our facility for professional care.",
       icon: <FaUserMd size={40} color="#fff" />,
       bgColor: "purple-500",
     },
     {
       title: "Get Well Soon",
-      description: "Follow prescribed treatments and feel better quickly with our guidance.",
+      description:
+        "Follow prescribed treatments and feel better quickly with our guidance.",
       icon: <FaSmile size={40} color="#fff" />,
       bgColor: "purple-500",
     },
@@ -66,48 +133,115 @@ const About = () => {
   const reasons = [
     {
       title: "Expert Doctors",
-      description: "Highly qualified specialists with years of experience providing the best care.",
+      description:
+        "Highly qualified specialists with years of experience providing the best care.",
       icon: <FaUserFriends size={35} color="#fff" />,
       bgColor: "purple-500",
     },
     {
       title: "24/7 Availability",
-      description: "Round-the-clock services to ensure you get care whenever you need it.",
+      description:
+        "Round-the-clock services to ensure you get care whenever you need it.",
       icon: <FaClock size={35} color="#fff" />,
       bgColor: "purple-500",
     },
     {
       title: "Advanced Technology",
-      description: "Using modern medical equipment for accurate diagnostics and treatments.",
+      description:
+        "Using modern medical equipment for accurate diagnostics and treatments.",
       icon: <FaStethoscope size={35} color="#fff" />,
       bgColor: "purple-500",
     },
     {
       title: "Trusted Quality",
-      description: "Our commitment to excellence has made us a trusted healthcare provider.",
+      description:
+        "Our commitment to excellence has made us a trusted healthcare provider.",
       icon: <FaMedal size={35} color="#fff" />,
       bgColor: "purple-500",
     },
   ];
 
   const milestones = [
-    { year: "2015", title: "Foundation", description: "Our healthcare journey began with a vision to serve the community.", icon: <FaRegLightbulb size={25} color="#fff" /> },
-    { year: "2017", title: "First Clinic", description: "Opened our first state-of-the-art clinic providing comprehensive care.", icon: <FaHospital size={25} color="#fff" /> },
-    { year: "2019", title: "Expanding Team", description: "Welcomed top specialists to expand our services and reach.", icon: <FaUsers size={25} color="#fff" /> },
-    { year: "2022", title: "Excellence Award", description: "Recognized for outstanding healthcare services and patient satisfaction.", icon: <FaAward size={25} color="#fff" /> },
+    {
+      year: "2015",
+      title: "Foundation",
+      description:
+        "Our healthcare journey began with a vision to serve the community.",
+      icon: <FaRegLightbulb size={25} color="#fff" />,
+    },
+    {
+      year: "2017",
+      title: "First Clinic",
+      description:
+        "Opened our first state-of-the-art clinic providing comprehensive care.",
+      icon: <FaHospital size={25} color="#fff" />,
+    },
+    {
+      year: "2019",
+      title: "Expanding Team",
+      description: "Welcomed top specialists to expand our services and reach.",
+      icon: <FaUsers size={25} color="#fff" />,
+    },
+    {
+      year: "2022",
+      title: "Excellence Award",
+      description:
+        "Recognized for outstanding healthcare services and patient satisfaction.",
+      icon: <FaAward size={25} color="#fff" />,
+    },
   ];
 
   const faqs = [
-    { question: "How can I book an appointment?", answer: "You can book an appointment through our website, mobile app, or by calling our clinic directly." },
-    { question: "What are the clinic's working hours?", answer: "Our clinics are open Monday to Saturday, from 8:00 AM to 8:00 PM." },
-    { question: "Do you accept insurance?", answer: "Yes, we accept most major health insurance providers. Please check with our staff for details." },
-    { question: "Can I consult online?", answer: "Yes! We provide telemedicine services for select doctors and follow-ups." },
-    { question: "What documents are required for the first visit?", answer: "Please bring a valid ID, insurance card (if applicable), and any previous medical records." },
-    { question: "Are vaccinations available for children and adults?", answer: "Yes, we provide comprehensive immunization services for all age groups." },
-    { question: "How can I get my lab results?", answer: "Lab results are available through our online patient portal or you can collect them at the clinic." },
-    { question: "What is your cancellation policy?", answer: "Appointments can be canceled or rescheduled up to 24 hours in advance without any charges." },
-    { question: "Do you provide emergency services?", answer: "Yes, our clinics are equipped to handle emergencies. Please contact the nearest clinic immediately." },
-    { question: "Are follow-up consultations free?", answer: "Follow-ups may be free or discounted depending on your treatment plan. Please confirm at the reception." },
+    {
+      question: "How can I book an appointment?",
+      answer:
+        "You can book an appointment through our website, mobile app, or by calling our clinic directly.",
+    },
+    {
+      question: "What are the clinic's working hours?",
+      answer:
+        "Our clinics are open Monday to Saturday, from 8:00 AM to 8:00 PM.",
+    },
+    {
+      question: "Do you accept insurance?",
+      answer:
+        "Yes, we accept most major health insurance providers. Please check with our staff for details.",
+    },
+    {
+      question: "Can I consult online?",
+      answer:
+        "Yes! We provide telemedicine services for select doctors and follow-ups.",
+    },
+    {
+      question: "What documents are required for the first visit?",
+      answer:
+        "Please bring a valid ID, insurance card (if applicable), and any previous medical records.",
+    },
+    {
+      question: "Are vaccinations available for children and adults?",
+      answer:
+        "Yes, we provide comprehensive immunization services for all age groups.",
+    },
+    {
+      question: "How can I get my lab results?",
+      answer:
+        "Lab results are available through our online patient portal or you can collect them at the clinic.",
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer:
+        "Appointments can be canceled or rescheduled up to 24 hours in advance without any charges.",
+    },
+    {
+      question: "Do you provide emergency services?",
+      answer:
+        "Yes, our clinics are equipped to handle emergencies. Please contact the nearest clinic immediately.",
+    },
+    {
+      question: "Are follow-up consultations free?",
+      answer:
+        "Follow-ups may be free or discounted depending on your treatment plan. Please confirm at the reception.",
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -116,7 +250,11 @@ const About = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -130,9 +268,21 @@ const About = () => {
   };
 
   const contactInfo = [
-    { icon: <FaEnvelope size={30} />, title: "Email", detail: "contact@healthcare.com" },
-    { icon: <FaPhoneAlt size={30} />, title: "Phone", detail: "+1 234 567 890" },
-    { icon: <FaMapMarkerAlt size={30} />, title: "Address", detail: "123 Health St, Wellness City" },
+    {
+      icon: <FaEnvelope size={30} />,
+      title: "Email",
+      detail: "contact@healthcare.com",
+    },
+    {
+      icon: <FaPhoneAlt size={30} />,
+      title: "Phone",
+      detail: "+1 234 567 890",
+    },
+    {
+      icon: <FaMapMarkerAlt size={30} />,
+      title: "Address",
+      detail: "123 Health St, Wellness City",
+    },
   ];
 
   return (
@@ -148,14 +298,18 @@ const About = () => {
               </h2>
               <h5 className="text-xl mb-4">Introduction & Mission</h5>
               <p className="text-lg leading-relaxed mb-4">
-                Welcome to <strong>HealthCare</strong> – a place where compassionate care meets cutting-edge technology. We are a team of dedicated professionals, committed to bringing you the best in healthcare services.
+                Welcome to <strong>HealthCare</strong> – a place where
+                compassionate care meets cutting-edge technology. We are a team
+                of dedicated professionals, committed to bringing you the best
+                in healthcare services.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Our mission is simple: to treat every patient with dignity, empathy, and the highest medical standards. Whether it’s a routine check-up or a complex surgery, we stand by our promise to deliver trustworthy and affordable care.
+                Our mission is simple: to treat every patient with dignity,
+                empathy, and the highest medical standards. Whether it’s a
+                routine check-up or a complex surgery, we stand by our promise
+                to deliver trustworthy and affordable care.
               </p>
-              <button
-                className="inline-flex items-center px-4 py-2 text-base font-medium text-white bg-purple-500 border-2 border-purple-500 rounded-lg hover:bg-transparent hover:scale-105 hover:text-purple-500 transition-all duration-300"
-              >
+              <button className="inline-flex items-center px-4 py-2 text-base font-medium text-white bg-purple-500 border-2 border-purple-500 rounded-lg hover:bg-transparent hover:scale-105 hover:text-purple-500 transition-all duration-300">
                 Read More →
               </button>
             </div>
@@ -188,7 +342,9 @@ const About = () => {
               </div>
               <h4 className="text-xl font-bold mb-3">Our Vision</h4>
               <p className="text-base leading-relaxed">
-                To be a world-class healthcare provider, offering affordable and accessible medical services while upholding the highest standards of ethics and compassion.
+                To be a world-class healthcare provider, offering affordable and
+                accessible medical services while upholding the highest
+                standards of ethics and compassion.
               </p>
             </div>
             {/* Mission Card */}
@@ -198,7 +354,9 @@ const About = () => {
               </div>
               <h4 className="text-xl font-bold mb-3">Our Mission</h4>
               <p className="text-base leading-relaxed">
-                To deliver exceptional and personalized care through a team of expert doctors, cutting-edge technology, and a patient-first approach that promotes healing and wellness.
+                To deliver exceptional and personalized care through a team of
+                expert doctors, cutting-edge technology, and a patient-first
+                approach that promotes healing and wellness.
               </p>
             </div>
           </div>
@@ -208,9 +366,7 @@ const About = () => {
       {/* What We Offer */}
       <div className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            What We Offer
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">What We Offer</h2>
           <p className="text-lg mb-8">
             Key Features & Services Designed to Keep You Healthy
           </p>
@@ -224,7 +380,9 @@ const About = () => {
                   {service.icon}
                 </div>
                 <h4 className="text-xl font-bold mb-3">{service.title}</h4>
-                <p className="text-base leading-relaxed">{service.description}</p>
+                <p className="text-base leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
@@ -234,9 +392,7 @@ const About = () => {
       {/* Meet Our Team */}
       <div className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Meet Our Team
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-lg mb-8">
             Dedicated Doctors & Key Members Who Make Healthcare Exceptional
           </p>
@@ -259,14 +415,10 @@ const About = () => {
                   <p className="text-sm">{doc.text}</p>
                 </div>
                 <div className="p-4">
-                  <button
-                    className="w-full mb-2 py-2 text-sm font-medium border border-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
-                  >
+                  <button className="w-full mb-2 py-2 text-sm font-medium border border-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300">
                     <FaUserMd className="inline mr-2" /> View Profile
                   </button>
-                  <button
-                    className="w-full py-2 text-sm font-medium text-white bg-purple-500 border border-purple-500 rounded-lg hover:bg-white hover:text-purple-500 transition-all duration-300"
-                  >
+                  <button className="w-full py-2 text-sm font-medium text-white bg-purple-500 border border-purple-500 rounded-lg hover:bg-white hover:text-purple-500 transition-all duration-300">
                     <FaCalendarAlt className="inline mr-2" /> Book Appointment
                   </button>
                 </div>
@@ -279,9 +431,7 @@ const About = () => {
       {/* How It Works */}
       <div className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            How It Works
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
           <p className="text-lg mb-8">
             A simple and easy process to book your healthcare appointments
           </p>
@@ -291,7 +441,9 @@ const About = () => {
                 key={index}
                 className="p-6 rounded-lg shadow-lg border-2 border-purple-500 hover:scale-105 transition-transform duration-300 flex flex-col items-center"
               >
-                <div className={`flex items-center justify-center w-20 h-20 mx-auto mb-4 rounded-full bg-${step.bgColor}`}>
+                <div
+                  className={`flex items-center justify-center w-20 h-20 mx-auto mb-4 rounded-full bg-${step.bgColor}`}
+                >
                   {step.icon}
                 </div>
                 <h5 className="text-lg font-bold mb-2">{step.title}</h5>
@@ -309,7 +461,8 @@ const About = () => {
             Why Choose Us?
           </h2>
           <p className="text-lg mb-8">
-            Discover the unique qualities that make our healthcare services stand out.
+            Discover the unique qualities that make our healthcare services
+            stand out.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {reasons.map((reason, index) => (
@@ -317,11 +470,15 @@ const About = () => {
                 key={index}
                 className="p-6 rounded-lg shadow-lg border-2 border-purple-500 hover:scale-105 transition-transform duration-300 flex flex-col items-center"
               >
-                <div className={`flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-${reason.bgColor}`}>
+                <div
+                  className={`flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-${reason.bgColor}`}
+                >
                   {reason.icon}
                 </div>
                 <h5 className="text-lg font-bold mb-2">{reason.title}</h5>
-                <p className="text-base leading-relaxed">{reason.description}</p>
+                <p className="text-base leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
             ))}
           </div>
@@ -331,11 +488,10 @@ const About = () => {
       {/* Our Journey (Timeline) */}
       <div className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Our Journey
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Our Journey</h2>
           <p className="text-lg mb-8">
-            Milestones that showcase our growth and commitment to healthcare excellence.
+            Milestones that showcase our growth and commitment to healthcare
+            excellence.
           </p>
           <div className="flex flex-col lg:flex-row justify-between items-start relative">
             {milestones.map((milestone, index) => (
@@ -348,7 +504,9 @@ const About = () => {
                 </div>
                 <h5 className="text-lg font-bold">{milestone.year}</h5>
                 <h6 className="text-base font-medium">{milestone.title}</h6>
-                <p className="text-sm max-w-[200px] leading-relaxed">{milestone.description}</p>
+                <p className="text-sm max-w-[200px] leading-relaxed">
+                  {milestone.description}
+                </p>
                 {index !== milestones.length - 1 && (
                   <div className="hidden lg:block absolute top-8 right-[-50%] w-[100%] h-1 bg-purple-500 z-0" />
                 )}
@@ -365,7 +523,8 @@ const About = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-center text-lg mb-8">
-            Answers to the most common questions about our services and processes.
+            Answers to the most common questions about our services and
+            processes.
           </p>
           <div>
             {faqs.map((faq, index) => (
@@ -374,7 +533,9 @@ const About = () => {
                   className="flex justify-between items-center p-4 border-2 border-purple-500 rounded-lg cursor-pointer"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="text-base font-medium">{`${index + 1}. ${faq.question}`}</span>
+                  <span className="text-base font-medium">{`${index + 1}. ${
+                    faq.question
+                  }`}</span>
                   {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
                 {openIndex === index && (
@@ -395,7 +556,8 @@ const About = () => {
             Get in Touch
           </h2>
           <p className="text-center text-lg mb-8">
-            We'd love to hear from you! Fill out the form or use the contact info below.
+            We'd love to hear from you! Fill out the form or use the contact
+            info below.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Info */}
@@ -456,6 +618,6 @@ const About = () => {
       </div>
     </>
   );
-}
+};
 
-export default About
+export default About;
