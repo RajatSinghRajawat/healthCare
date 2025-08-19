@@ -15,7 +15,7 @@
 //     isDarkMode,
 //     toggleTheme: () => setIsDarkMode((prev) => !prev),
 //     colors: {
-//       primary: "#6924b9", // new purple
+//       primary: "#6924b9", // new yellow
 //       lightBg: "#fff",
 //       darkBg: "#000",
 //       lightText: "#000",
@@ -52,6 +52,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ThemeContext from "./ThemeContext.jsx";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Contact from "./Pages/Contact_Support.jsx";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -64,7 +65,7 @@ function App() {
     isDarkMode,
     toggleTheme: () => setIsDarkMode((prev) => !prev),
     colors: {
-      primary: "#6924b9", // bg-purple-500
+      primary: "#6924b9", // bg-yellow-500
       lightBg: "#fff",
       darkBg: "#000",
       lightText: "#000",
@@ -89,7 +90,7 @@ function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              {/* <Route path="/" element={<Home />} /> */}
+              <Route path="/contact-support" element={<Contact />} />
             </Routes>
           </main>
           <Footer />
