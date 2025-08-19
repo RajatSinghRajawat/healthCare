@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import ThemeContext from "../ThemeContext.jsx";
+import {
+  FaUserMd,
+  FaHospital,
+  FaRegSmile
+} from "react-icons/fa";
 
 const RegisterModal = ({ isOpen, onClose }) => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -32,7 +37,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
           </h2>
           <button
             onClick={onClose}
-            className="absolute right-4 top-4 text-lg hover:bg-purple-500 hover:text-white rounded-full p-2 transition-transform duration-300 hover:scale-110"
+            className="absolute right-4 top-3 text-lg bg-purple-500 hover:text-white hover:bg-transparent hover:border hover:border-purple-500 rounded p-2 transition-transform duration-300"
             aria-label="Close modal"
           >
             ✕
@@ -50,12 +55,14 @@ const RegisterModal = ({ isOpen, onClose }) => {
             } border rounded-lg shadow-sm p-6 text-center hover:shadow-lg transition-shadow duration-300`}
           >
             <div className="mb-3">
-              <i className="fa-solid fa-user fa-3x text-purple-500"></i>
+              <div className="text-4xl flex justify-center mb-4 text-purple-500">
+                <FaRegSmile />
+              </div>
             </div>
             <h4 className="text-lg font-semibold mb-4">User</h4>
             <NavLink
               to="/register/user"
-              className="px-5 py-2 bg-purple-500 text-white font-medium rounded-md hover:bg-transparent hover:border hover:border-purple-500 transition-transform duration-300 hover:scale-105"
+              className="px-5 py-2 bg-purple-500 text-white font-medium rounded-md hover:bg-transparent hover:border hover:text-purple-500 hover:border-purple-500 transition-transform duration-300 hover:scale-105"
               onClick={onClose}
             >
               Register Now
@@ -71,12 +78,14 @@ const RegisterModal = ({ isOpen, onClose }) => {
             } border rounded-lg shadow-sm p-6 text-center hover:shadow-lg transition-shadow duration-300`}
           >
             <div className="mb-3">
-              <i className="fa-solid fa-user-doctor fa-3x text-purple-500"></i>
+              <div className="text-4xl flex justify-center mb-4 text-purple-500">
+                <FaUserMd />
+              </div>
             </div>
             <h4 className="text-lg font-semibold mb-4">Doctor</h4>
             <NavLink
               to="/register/doctor"
-              className="px-5 py-2 bg-purple-500 text-white font-medium rounded-md hover:bg-transparent hover:border hover:border-purple-500 transition-transform duration-300 hover:scale-105"
+              className="px-5 py-2 bg-purple-500 text-white font-medium rounded-md hover:bg-transparent hover:border hover:text-purple-500 hover:border-purple-500 transition-transform duration-300 hover:scale-105"
               onClick={onClose}
             >
               Register Now
@@ -92,12 +101,14 @@ const RegisterModal = ({ isOpen, onClose }) => {
             } border rounded-lg shadow-sm p-6 text-center hover:shadow-lg transition-shadow duration-300`}
           >
             <div className="mb-3">
-              <i className="fa-solid fa-house-medical-circle-check fa-3x text-purple-500"></i>
+              <div className="text-4xl flex justify-center mb-4 text-purple-500">
+                <FaHospital />
+              </div>
             </div>
             <h4 className="text-lg font-semibold mb-4">Hospital</h4>
             <NavLink
               to="/register/hospital"
-              className="px-5 py-2 bg-purple-500 text-white font-medium rounded-md hover:bg-transparent hover:border hover:border-purple-500 transition-transform duration-300 hover:scale-105"
+              className="px-5 py-2 bg-purple-500 text-white font-medium rounded-md hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500 transition-transform duration-300 hover:scale-105"
               onClick={onClose}
             >
               Register Now

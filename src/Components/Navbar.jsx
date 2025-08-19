@@ -102,6 +102,7 @@ const Navbar = () => {
               <NavLink
                 key={link.name}
                 to={link.path}
+                onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
                   `py-2 px-4 rounded-lg transition-colors duration-300 md:w-auto w-full ${
                     isActive
