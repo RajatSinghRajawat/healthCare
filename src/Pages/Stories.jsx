@@ -69,7 +69,7 @@ function Stories() {
             {currentStories.map((story) => (
               <div
                 key={story.id}
-                className=" border-2 border-[#6924b9] rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className=" border-2 border-purple-500 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 role="article"
                 aria-labelledby={`story-title-${story.id}`}
               >
@@ -83,7 +83,7 @@ function Stories() {
                   <p className="text-base mb-4">{story.description}</p>
                   <p className="text-sm mb-6">{story.date}</p>
                   <button
-                    className="px-5 py-2 text-base font-medium text-white bg-[#6924b9] border-2 border-[#6924b9] rounded-lg hover:bg-white hover:text-[#6924b9] transition-all duration-300"
+                    className="px-5 py-2 text-base font-medium text-white bg-purple-500 border-2 border-purple-500 rounded-lg hover:bg-transparent hover:text-purple-500 transition-all duration-300"
                     aria-label={`Read more about ${story.title}`}
                   >
                     Read More
