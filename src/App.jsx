@@ -54,7 +54,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
-import Doctor from "./Pages/Doctor.jsx";
+import Stories from "./Pages/Stories.jsx";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -94,7 +94,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/doctors" element={<Doctor />} />
+              <Route path="/stories" element={<Stories />} />
 
 
 
