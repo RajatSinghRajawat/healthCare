@@ -8,6 +8,7 @@ import About from "./Pages/About.jsx";
 import Doctor from "./Pages/Doctor.jsx";
 import Blog from "./Pages/Blog.jsx";
 import Contact from "./Pages/Contact_Support.jsx";
+import Stories from "./Pages/Stories.jsx";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -50,6 +51,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/doctors" element={<Doctor />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/stories" element={<Stories />} /> 
               <Route path="/contact-support" element={<Contact />} />
             </Routes>
           </main>
