@@ -418,7 +418,7 @@ const About = () => {
                   <button className="w-full mb-2 py-2 text-sm font-medium border border-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300">
                     <FaUserMd className="inline mr-2" /> View Profile
                   </button>
-                  <button className="w-full py-2 text-sm font-medium text-white bg-purple-500 border border-purple-500 rounded-lg hover:bg-transparent transition-all duration-300">
+                  <button className="w-full py-2 text-sm font-medium text-white bg-purple-500 border border-purple-500 rounded-lg hover:text-purple-500 hover:bg-transparent transition-all duration-300">
                     <FaCalendarAlt className="inline mr-2" /> Book Appointment
                   </button>
                 </div>
