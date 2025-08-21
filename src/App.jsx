@@ -20,7 +20,7 @@ function App() {
     isDarkMode,
     toggleTheme: () => setIsDarkMode((prev) => !prev),
     colors: {
-      primary: "#6924b9", // bg-purple-500
+      primary: "#6924b9", // bg-yellow-500
       lightBg: "#fff",
       darkBg: "#000",
       lightText: "#000",

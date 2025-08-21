@@ -58,7 +58,7 @@ const Footer = () => {
             Your health, our priority. Quality care for everyone, always.
           </p>
           <p className="text-sm leading-relaxed mb-4">
-            Accredited by NABH | 24/7 Emergency | 500+ Beds
+            Accpurpleited by NABH | 24/7 Emergency | 500+ Beds
           </p>
           <div className="flex gap-4 mt-6 justify-center md:justify-start">
             {socialLinks.map((social, index) => (
@@ -119,7 +119,7 @@ const Footer = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
+              requipurple
               className={`p-3 rounded-lg border-2 border-purple-500 outline-none text-base w-full max-w-[320px] transition-all duration-300 ${
                 isDarkMode
                   ? "bg-black text-white placeholder-white/60"
