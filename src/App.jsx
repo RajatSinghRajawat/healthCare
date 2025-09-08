@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
 import Doctor from "./Pages/Doctor.jsx";
+import DoctorDetials from "./Pages/DoctorDetials.jsx";
 import Blog from "./Pages/Blog.jsx";
 import Contact from "./Pages/Contact_Support.jsx";
 import Stories from "./Pages/Stories.jsx";
@@ -50,6 +51,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/doctors" element={<Doctor />} />
+              <Route path="/doctors/detials" element={<DoctorDetials />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/stories" element={<Stories />} /> 
               <Route path="/contact-support" element={<Contact />} />
