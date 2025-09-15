@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import ThemeContext from "../ThemeContext.jsx";
 
 const Footer = () => {
-  const { isDarkMode, colors } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
