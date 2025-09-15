@@ -42,7 +42,7 @@ const BlogDetails = () => {
     <div className="min-h-screen  font-['Roboto']">
       <div className="relative bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-10 rounded-2xl shadow-lg max-w-6xl mx-auto mt-8">
         <h1 className="text-4xl md:text-5xl font-['Merriweather'] font-bold text-center  leading-snug">
-          The Importance of Preventive HealthCare
+          The Importance of Preventive Healthcare
         </h1>
       </div>
 
