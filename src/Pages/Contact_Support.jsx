@@ -1,13 +1,7 @@
 import React from "react";
 import { FaInstagram, FaLinkedinIn, FaTwitter, FaGlobe } from "react-icons/fa";
-import { FaInstagram, FaLinkedinIn, FaTwitter, FaGlobe } from "react-icons/fa";
 
 const Contact = () => {
-  const handleSubmit = () => {
-    // Placeholder for submit action (e.g., API call or console log)
-    console.log("Form submitted");
-  };
-
   const handleSubmit = () => {
     // Placeholder for submit action (e.g., API call or console log)
     console.log("Form submitted");
@@ -35,30 +29,34 @@ const Contact = () => {
           {/* Left Section */}
           <div className="flex flex-col">
             <h1 className="font-semibold text-lg uppercase tracking-wide italic ">
-            <h1 className="font-semibold text-lg uppercase tracking-wide italic ">
               Contact & Support
             </h1>
             <h2 className="text-4xl md:text-5xl font-bold  mt-4">
               Let’s Get In Touch
-            <h2 className="text-4xl md:text-5xl font-bold  mt-4">
-              Let’s Get In Touch
             </h2>
             <p className="mt-6 text-lg italic ">
-              Reach out to us and our team at HealthCare Wellness Clinic will respond within 24 hours. Contact us directly at{" "}
-              <a href="mailto:hello@slothui.com" className="underline text-purple-500">
+              Reach out to us and our team at HealthCare Wellness Clinic will
+              respond within 24 hours. Contact us directly at{" "}
+              <a
+                href="mailto:hello@slothui.com"
+                className="underline text-purple-500"
+              >
                 hello@slothui.com
               </a>
             </p>
             <p className="text-lg italic ">
-              We’re here to support you 24/7 with all your healthcare needs. Whether you have questions about our doctors, booking appointments, online consultations, or medical services, our dedicated team, led by Dr. Vivek Gupta, is just a message away. Reach out via email or social media for fast, reliable, and caring support.
-            <p className="text-lg italic ">
-              We’re here to support you 24/7 with all your healthcare needs. Whether you have questions about our doctors, booking appointments, online consultations, or medical services, our dedicated team, led by Dr. Vivek Gupta, is just a message away. Reach out via email or social media for fast, reliable, and caring support.
+              We’re here to support you 24/7 with all your healthcare needs.
+              Whether you have questions about our doctors, booking
+              appointments, online consultations, or medical services, our
+              dedicated team, led by Dr. Vivek Gupta, is just a message away.
+              Reach out via email or social media for fast, reliable, and caring
+              support.
             </p>
 
             {/* Social Icons */}
             <div className="flex flex-col gap-4 mt-8">
               <h2 className="text-2xl font-bold  flex items-center">
-                <FaGlobe className="mr-2 text-purple-500"/> Connect with Us
+                <FaGlobe className="mr-2 text-purple-500" /> Connect with Us
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
@@ -88,7 +86,9 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-full  flex items-center justify-center">
                       {social.icon}
                     </div>
-                    <span className="text-lg font-medium">{social.platform}</span>
+                    <span className="text-lg font-medium">
+                      {social.platform}
+                    </span>
                   </a>
                 ))}
               </div>
@@ -99,7 +99,6 @@ const Contact = () => {
           <div className="border-2 border-purple-500 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 animate-fade-in">
             <div className="flex flex-col gap-6">
               <div>
-                <label className="block mb-2 text-sm font-medium ">
                 <label className="block mb-2 text-sm font-medium ">
                   Full Name
                 </label>
@@ -112,7 +111,6 @@ const Contact = () => {
 
               <div>
                 <label className="block mb-2 text-sm font-medium ">
-                <label className="block mb-2 text-sm font-medium ">
                   Email Address
                 </label>
                 <input
@@ -123,7 +121,6 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block mb-2 text-sm font-medium ">
                 <label className="block mb-2 text-sm font-medium ">
                   Message
                 </label>
@@ -139,7 +136,6 @@ const Contact = () => {
                 <p className="text-sm ">
                   I agree to the{" "}
                   <a href="#" className="underline hover:text-black">
-                  <a href="#" className="underline hover:text-black">
                     Privacy Policy
                   </a>
                 </p>
@@ -151,7 +147,6 @@ const Contact = () => {
               >
                 Submit Form
               </button>
-            </div>
             </div>
           </div>
         </div>
