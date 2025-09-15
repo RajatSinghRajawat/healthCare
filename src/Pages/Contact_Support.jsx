@@ -1,7 +1,13 @@
 import React from "react";
 import { FaInstagram, FaLinkedinIn, FaTwitter, FaGlobe } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaTwitter, FaGlobe } from "react-icons/fa";
 
 const Contact = () => {
+  const handleSubmit = () => {
+    // Placeholder for submit action (e.g., API call or console log)
+    console.log("Form submitted");
+  };
+
   const handleSubmit = () => {
     // Placeholder for submit action (e.g., API call or console log)
     console.log("Form submitted");
@@ -29,8 +35,11 @@ const Contact = () => {
           {/* Left Section */}
           <div className="flex flex-col">
             <h1 className="font-semibold text-lg uppercase tracking-wide italic ">
+            <h1 className="font-semibold text-lg uppercase tracking-wide italic ">
               Contact & Support
             </h1>
+            <h2 className="text-4xl md:text-5xl font-bold  mt-4">
+              Let’s Get In Touch
             <h2 className="text-4xl md:text-5xl font-bold  mt-4">
               Let’s Get In Touch
             </h2>
@@ -40,6 +49,8 @@ const Contact = () => {
                 hello@slothui.com
               </a>
             </p>
+            <p className="text-lg italic ">
+              We’re here to support you 24/7 with all your healthcare needs. Whether you have questions about our doctors, booking appointments, online consultations, or medical services, our dedicated team, led by Dr. Vivek Gupta, is just a message away. Reach out via email or social media for fast, reliable, and caring support.
             <p className="text-lg italic ">
               We’re here to support you 24/7 with all your healthcare needs. Whether you have questions about our doctors, booking appointments, online consultations, or medical services, our dedicated team, led by Dr. Vivek Gupta, is just a message away. Reach out via email or social media for fast, reliable, and caring support.
             </p>
@@ -89,6 +100,7 @@ const Contact = () => {
             <div className="flex flex-col gap-6">
               <div>
                 <label className="block mb-2 text-sm font-medium ">
+                <label className="block mb-2 text-sm font-medium ">
                   Full Name
                 </label>
                 <input
@@ -100,6 +112,7 @@ const Contact = () => {
 
               <div>
                 <label className="block mb-2 text-sm font-medium ">
+                <label className="block mb-2 text-sm font-medium ">
                   Email Address
                 </label>
                 <input
@@ -110,6 +123,7 @@ const Contact = () => {
               </div>
 
               <div>
+                <label className="block mb-2 text-sm font-medium ">
                 <label className="block mb-2 text-sm font-medium ">
                   Message
                 </label>
@@ -125,6 +139,7 @@ const Contact = () => {
                 <p className="text-sm ">
                   I agree to the{" "}
                   <a href="#" className="underline hover:text-black">
+                  <a href="#" className="underline hover:text-black">
                     Privacy Policy
                   </a>
                 </p>
@@ -136,6 +151,7 @@ const Contact = () => {
               >
                 Submit Form
               </button>
+            </div>
             </div>
           </div>
         </div>
