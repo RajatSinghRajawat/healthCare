@@ -35,19 +35,28 @@ const Contact = () => {
               Let’s Get In Touch
             </h2>
             <p className="mt-6 text-lg italic ">
-              Reach out to us and our team at HealthCare Wellness Clinic will respond within 24 hours. Contact us directly at{" "}
-              <a href="mailto:hello@slothui.com" className="underline text-purple-500">
+              Reach out to us and our team at HealthCare Wellness Clinic will
+              respond within 24 hours. Contact us directly at{" "}
+              <a
+                href="mailto:hello@slothui.com"
+                className="underline text-purple-500"
+              >
                 hello@slothui.com
               </a>
             </p>
             <p className="text-lg italic ">
-              We’re here to support you 24/7 with all your healthcare needs. Whether you have questions about our doctors, booking appointments, online consultations, or medical services, our dedicated team, led by Dr. Vivek Gupta, is just a message away. Reach out via email or social media for fast, reliable, and caring support.
+              We’re here to support you 24/7 with all your healthcare needs.
+              Whether you have questions about our doctors, booking
+              appointments, online consultations, or medical services, our
+              dedicated team, led by Dr. Vivek Gupta, is just a message away.
+              Reach out via email or social media for fast, reliable, and caring
+              support.
             </p>
 
             {/* Social Icons */}
             <div className="flex flex-col gap-4 mt-8">
               <h2 className="text-2xl font-bold  flex items-center">
-                <FaGlobe className="mr-2 text-purple-500"/> Connect with Us
+                <FaGlobe className="mr-2 text-purple-500" /> Connect with Us
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
@@ -77,7 +86,9 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-full  flex items-center justify-center">
                       {social.icon}
                     </div>
-                    <span className="text-lg font-medium">{social.platform}</span>
+                    <span className="text-lg font-medium">
+                      {social.platform}
+                    </span>
                   </a>
                 ))}
               </div>
